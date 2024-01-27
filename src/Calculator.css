@@ -1,43 +1,60 @@
+/* Calculator.css */
 .calculator {
-    max-width: 300px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  input {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-  }
-  
-  button {
-    width: 100%;
-    padding: 15px;
-    font-size: 16px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #ddd;
-  }
-  
-  .result {
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  margin: auto;
+  padding: 3px;
+  border: 1px solid #1c1c1c;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  background-color: #111;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+   /* Use a futuristic font */
+
+  /* Neon glow effect */
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+}
+
+input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 15px;
+  font-size: 20px;
+  border: 1px solid #1c1c1c;
+  border-radius: 5px;
+  outline: none;
+  background-color: rgb(30, 158, 201);
+  color: #0f0; /* Neon green text */
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 20px;
+  font-size: 18px;
+  background-color: #333;
+  border: 1px solid #1c1c1c;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #0f0; /* Neon green text */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:active {
+  background-color: #555;
+}
+
+.result {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+}
