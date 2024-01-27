@@ -1,16 +1,13 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react';
+import Calculator from './Calculator';
+import './App.css';
 
-const App = () => {
-  const [count, setCount] = useState(0)
-
+function App() {
   return (
-    <>
-      <div>
-        <h1>Hello</h1>
-      </div>
-    </>
-  )
+    <div className="App">
+      <Calculator />
+    </div>
+  );
 }
 
-export default App
+export default App;
