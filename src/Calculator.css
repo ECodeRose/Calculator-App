@@ -28,6 +28,7 @@ input {
   outline: none;
   background-color: rgb(30, 158, 201);
   color: #0f0; /* Neon green text */
+  text-align: right;
 }
 
 .buttons {
@@ -57,4 +58,6 @@ button:active {
   font-size: 20px;
   font-weight: bold;
   text-align: right;
+  color: #0f0;
+  font-family: 'Orbitron', sans-serif;
 }

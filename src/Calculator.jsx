@@ -1,3 +1,4 @@
+// Calculator.js
 import React, { useState } from 'react';
 import './Calculator.css';
 
@@ -8,8 +9,11 @@ const Calculator = () => {
   const handleButtonClick = (value) => {
     if (value === '=') {
       try {
-        setResult(eval(input));
+        const calculatedResult = eval(input.replace(/÷/g, '/').replace(/x/g, '*'));
+        setInput(calculatedResult.toString());
+        setResult(calculatedResult);
       } catch (error) {
+        setInput('Error');
         setResult('Error');
       }
     } else if (value === 'C') {
@@ -21,10 +25,10 @@ const Calculator = () => {
   };
 
   const buttons = [
-    '7', '8', '9', '/',
-    '4', '5', '6', '*',
+    '7', '8', '9', '÷',
+    '4', '5', '6', 'x',
     '1', '2', '3', '-',
-    '0', '.', '=', '+',
+    '0', '.', '+', '=',
     'C',
   ];
 
@@ -41,7 +45,6 @@ const Calculator = () => {
           </button>
         ))}
       </div>
-      <div className="result">Result: {result}</div>
     </div>
   );
 };
