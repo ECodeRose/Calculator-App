@@ -6,9 +6,9 @@ const Calculator = () => {
   const [result, setResult] = useState(0);
 
   const handleButtonClick = (value) => {
-    const audio = new Audio('src/assets/sounds/CalcButton.mp3');
-    const audioEQ = new Audio('src/assets/sounds/EqualButton.mp3');
-    const audioC = new Audio('src/assets/sounds/CButton.mp3');
+    const audio = new Audio('./src/assets/sounds/CalcButton.mp3');
+    const audioEQ = new Audio('./src/assets/sounds/EqualButton.mp3');
+    const audioC = new Audio('./src/assets/sounds/CButton.mp3');
     if (value === '=') {
       try {
         const calculatedResult = eval(input.replace(/÷/g, '/').replace(/x/g, '*'));
