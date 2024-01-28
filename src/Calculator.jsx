@@ -29,7 +29,6 @@ const Calculator = () => {
     '4', '5', '6', 'x',
     '1', '2', '3', '-',
     '0', '.', '+', '=',
-    'C',
   ];
 
   return (
@@ -44,7 +43,9 @@ const Calculator = () => {
             {button}
           </button>
         ))}
+        <button key="C" className="c-button" onClick={() => handleButtonClick('C')}>C</button>
       </div>
+      
     </div>
   );
 };
