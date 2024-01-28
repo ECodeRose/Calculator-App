@@ -1,4 +1,3 @@
-// Calculator.js
 import React, { useState } from 'react';
 import './Calculator.css';
 
@@ -7,11 +6,15 @@ const Calculator = () => {
   const [result, setResult] = useState(0);
 
   const handleButtonClick = (value) => {
+    const audio = new Audio('src/assets/sounds/CalcButton.mp3');
+    const audioEQ = new Audio('src/assets/sounds/EqualButton.mp3');
+    const audioC = new Audio('src/assets/sounds/CButton.mp3');
     if (value === '=') {
       try {
         const calculatedResult = eval(input.replace(/÷/g, '/').replace(/x/g, '*'));
         setInput(calculatedResult.toString());
         setResult(calculatedResult);
+        audioEQ.play()
       } catch (error) {
         setInput('Error');
         setResult('Error');
@@ -19,8 +22,10 @@ const Calculator = () => {
     } else if (value === 'C') {
       setInput('');
       setResult(0);
+      audioC.play()
     } else {
       setInput((prevInput) => prevInput + value);
+      audio.play()
     }
   };
 
